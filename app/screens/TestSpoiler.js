@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import dismissKeyboard from 'react-native/Libraries/Utilities/dismissKeyboard';
 import Spoiler from './../components/Spoiler';
+import { testID } from './../../app/utils';
+
+const ContainerView = Platform.select({
+    ios: KeyboardAvoidingView,
+    android: View
+});
 
 export default class TestSpoiler extends Component {
     state = {
@@ -42,14 +49,20 @@ export default class TestSpoiler extends Component {
     render() {
         const { params, errorParams } = this.state;
         return (
-            <View style={styles.container}>
+            <ContainerView 
+                behavior="padding"
+                onResponderGrant={dismissKeyboard}
+                onStartShouldSetResponder={() => true}
+                style={styles.container} 
+                {...testID('testSpoilerContainer')}
+            >
                 <Spoiler title="Mandatory Fields">
                     {this.renderMandatoryFields(params)}
                 </Spoiler>
                 <Spoiler title="Mandatory Fields - Error case" defaultOpen={false}>
                     {this.renderMandatoryFields(errorParams)}
                 </Spoiler>
-            </View>
+            </ContainerView>
         );  
     }
 }

@@ -10,6 +10,8 @@ const ContainerView = Platform.select({
 });
 
 export default class TestSpoiler extends Component {
+    static title = 'Test Spoiler'
+
     state = {
         params: {
             accountNumber: '000123456789', // required field

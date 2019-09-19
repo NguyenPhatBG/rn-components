@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import { YellowBox } from 'react-native';
 import SwitchRoute from './app/navigator/StackNavigator';
+import DrawerContainer from '../rn-components/app/navigator/Drawer';
 
 class App extends PureComponent {
   constructor(props) {
@@ -44,7 +45,7 @@ export default App;
   * 1. Splash Screen <ic_laucher, backgroundImage>
   * 2. Authenticate <Login, Register, Forget password, Change password> 
   * 3. Intro app
-  * 4. Main app <Drawer, BottomTab, Normal>
+  * 4. Main app <Drawer, BottomTab, TopTab, Normal>
   */
 
  /**
@@ -54,4 +55,7 @@ export default App;
   * 3. WebRTC
   * 4. SIP.js
   * 5. QRCode
+  * 6. Voice // https://github.com/dev-yakuza/react_native_voice_exercise/blob/master/src/App.tsx
+  * 7. Video
+  * 8. Music
   */

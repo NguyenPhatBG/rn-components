@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, StyleSheet, KeyboardAvoidingView, Platform, Button } from 'react-native';
 import dismissKeyboard from 'react-native/Libraries/Utilities/dismissKeyboard';
 import Spoiler from './../components/Spoiler';
 import { testID } from './../../app/utils';
@@ -64,6 +64,7 @@ export default class TestSpoiler extends Component {
                 <Spoiler title="Mandatory Fields - Error case" defaultOpen={false}>
                     {this.renderMandatoryFields(errorParams)}
                 </Spoiler>
+                <Button title="Go to detail" onPress={() => this.props.navigation.navigate('SpoilerDetail')} />
             </ContainerView>
         );  
     }

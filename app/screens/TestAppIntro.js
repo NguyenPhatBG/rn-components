@@ -29,7 +29,7 @@ export default class TestAppIntro extends Component {
   };
   _renderDoneButton = () => {
     return (
-      <TouchableOpacity style={styles.buttonCircle} onPress={() => this.props.navigation.navigate('drawerRouter')}>
+      <TouchableOpacity style={styles.buttonCircle} onPress={() => this.props.navigation.navigate('Login')}>
         <Icon
           name="md-checkmark"
           color="rgba(255, 255, 255, .9)"

@@ -5,10 +5,10 @@ export default class TopTabSecond extends Component {
     static navigationOptions = {
         tabBarLabel: 'Tab 02',
     };
-    
+
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: '#2980b9' }} />
+            <View />
         );
     }
 }

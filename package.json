@@ -9,6 +9,8 @@
     "android": "react-native run-android"
   },
   "dependencies": {
+    "faker": "^4.1.0",
+    "moment": "^2.24.0",
     "prop-types": "^15.7.2",
     "react": "16.8.6",
     "react-native": "0.60.5",

@@ -9,6 +9,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 import TestLoginApp from '../screens/TestAppLogin';
 import TestAppIntro from '../screens/TestAppIntro';
 import TestReCaptcha from '../screens/TestReCaptcha';
+import TestMovieBooking from '../screens/TestMovieBooking';
 
 // Tabs
 import TopTabFirst from './../screens/tabs/TopTabFirst';
@@ -16,6 +17,7 @@ import TopTabSecond from './../screens/tabs/TopTabSecond';
 import TopTabThird from './../screens/tabs/TopTabThird';
 // Details
 import SpoilerDetail from './../screens/details/spoilerDetail';
+import MovieComfirm from './../components/movieTickets/Confirmation';
 
 /** Flow 01 */
 const StackRoute = createStackNavigator({
@@ -27,7 +29,7 @@ const StackRoute = createStackNavigator({
     headerMode: 'none'
 });
 
-/** Flow 02 */
+/** Flow Stack */
 const TopTab = createMaterialTopTabNavigator({
   TopTabFirst,
   TopTabSecond,
@@ -64,10 +66,26 @@ const StackSpoiler = createStackNavigator({
   headerStatusBarHeight: Platform.OS === 'android' ? StatusBar.currentHeight || (Platform.Version < 23 ? 25 : 24) : 0
 });
 
-/** Drawer App */
+const StackCaptcha = createStackNavigator({
+  TestReCaptcha
+}, {
+  headerLayoutPreset: 'center',
+  headerStatusBarHeight: Platform.OS === 'android' ? StatusBar.currentHeight || (Platform.Version < 23 ? 25 : 24) : 0
+});
+
+const StackMovie = createStackNavigator({
+  TestMovieBooking,
+  MovieComfirm
+}, {
+  headerLayoutPreset: 'center',
+  headerStatusBarHeight: Platform.OS === 'android' ? StatusBar.currentHeight || (Platform.Version < 23 ? 25 : 24) : 0
+});
+
+/** Flow Drawer */
 const DrawerRoute = createDrawerNavigator({
     Spoiler: StackSpoiler,
-    Captcha: TestReCaptcha
+    Captcha: StackCaptcha,
+    Movie: StackMovie
   }, {
     initialRouteName: 'Spoiler',
     contentOptions: {

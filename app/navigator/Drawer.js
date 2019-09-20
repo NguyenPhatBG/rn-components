@@ -4,6 +4,7 @@ import DrawerLayout from 'react-native-drawer-layout-polyfill'
 
 import TestSpoiler from '../screens/TestSpoiler';
 import TestReCaptcha from '../screens/TestReCaptcha';
+import TestHorizontalCalendar from '../screens/TestHorizontalCalendar';
 
 import Header from '../components/Header';
 import MenuItem from '../components/MenuItem';
@@ -15,7 +16,8 @@ export default class DrawerContainer extends PureComponent {
     isDrawerOpen: false,
     routes: [
       TestReCaptcha,
-      TestSpoiler
+      TestSpoiler,
+      TestHorizontalCalendar
     ].filter(item => item),
   };
 

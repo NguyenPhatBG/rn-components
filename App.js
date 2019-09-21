@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { YellowBox } from 'react-native';
 import SwitchRoute from './app/navigator/StackNavigator';
-import DrawerContainer from '../rn-components/app/navigator/Drawer';
 
 class App extends PureComponent {
   constructor(props) {

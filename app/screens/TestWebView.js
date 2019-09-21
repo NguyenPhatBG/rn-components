@@ -14,10 +14,10 @@ export default class TestWebView extends Component {
     }
 
     render() {
-        const { styleOld, styleNew, webViewStyle, activityIndicatorStyle } = styles;
+        const { styleNew, webViewStyle, activityIndicatorStyle } = styles;
         const { visible } = this.state;
         return (
-            <View style={visible === true ? styleOld : styleNew}>
+            <View style={visible === true ? webViewStyle : styleNew}>
                 {
                     visible ? (
                         <ActivityIndicator color="#009688" size="large" style={activityIndicatorStyle} />
@@ -38,8 +38,7 @@ export default class TestWebView extends Component {
 }
 
 const styles = StyleSheet.create({
-    styleOld: { flex: 1, justifyContent: 'center', alignItems: 'center' },
     styleNew: { flex: 1 },
-    webViewStyle: { flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 40 },
+    webViewStyle: { flex: 1, justifyContent: 'center', alignItems: 'center' },
     activityIndicatorStyle: { flex: 1, justifyContent: 'center', alignItems: 'center', position: 'absolute' }
 });

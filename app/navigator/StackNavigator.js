@@ -10,6 +10,7 @@ import TestLoginApp from '../screens/TestAppLogin';
 import TestAppIntro from '../screens/TestAppIntro';
 import TestReCaptcha from '../screens/TestReCaptcha';
 import TestMovieBooking from '../screens/TestMovieBooking';
+import TestWebView from '../screens/TestWebView';
 
 // Tabs
 import TopTabFirst from './../screens/tabs/TopTabFirst';
@@ -85,7 +86,8 @@ const StackMovie = createStackNavigator({
 const DrawerRoute = createDrawerNavigator({
     Spoiler: StackSpoiler,
     Captcha: StackCaptcha,
-    Movie: StackMovie
+    Movie: StackMovie,
+    WebView: TestWebView
   }, {
     initialRouteName: 'Spoiler',
     contentOptions: {

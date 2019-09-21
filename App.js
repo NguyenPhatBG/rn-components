@@ -59,3 +59,8 @@ export default App;
   * 7. Video
   * 8. Music
   */
+
+  /**
+  * https://aboutreact.com/react-native-view-pager/
+  * https://aboutreact.com/react-native-navigation-drawer/
+  */

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { YellowBox } from 'react-native';
-import SwitchRoute from './app/navigator/StackNavigator';
+import SwitchRoute from './app/navigator/RootNavigator';
 
 class App extends PureComponent {
   constructor(props) {

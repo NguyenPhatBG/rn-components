@@ -30,7 +30,9 @@ const filterEvents = (date: Moment): ?Array<EventType> =>
   FAKE_EVENTS.filter(event => event.date.isSame(date, 'day'));
 
 export default class TestHorizontalCalendar extends React.Component {
-  static title = 'Horizontal Calendar'
+  static navigationOptions = {
+    tabBarLabel: 'Calendar Horizontal',
+  };
 
   state = {
     events: filterEvents(moment()),

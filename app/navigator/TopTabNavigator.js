@@ -7,6 +7,8 @@ import TopTabThird from './../screens/tabs/TopTabThird';
 // Tabs Calendar
 import TestHorizontalCalendar from '../screens/TestHorizontalCalendar';
 import TestCalendarSelectPicker from '../screens/TestCalendarSelectPicker';
+// Tabs Permission
+import TestVoiceRecognition from '../screens/TestVoiceRecognition';
 
 const topTabStyle = {
     lazy: true,
@@ -15,7 +17,7 @@ const topTabStyle = {
         activeTintColor: '#FFFFFF',
         inactiveTintColor: '#F8F8F8',
         style: {
-            backgroundColor: '#FF9800',
+            backgroundColor: '#30336b',
         },
         labelStyle: {
             textAlign: 'center',
@@ -30,8 +32,10 @@ const topTabStyle = {
 /** Flow TOP TABs Stack */
 const TopTab = createMaterialTopTabNavigator({ TopTabFirst, TopTabSecond, TopTabThird } , topTabStyle);
 const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker } , topTabStyle);
+const TopTabPermission = createMaterialTopTabNavigator({ TestVoiceRecognition }, topTabStyle);
 
 export {
     TopTab,
-    TopTabCalendar
+    TopTabCalendar,
+    TopTabPermission
 };

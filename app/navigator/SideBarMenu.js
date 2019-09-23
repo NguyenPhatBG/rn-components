@@ -19,7 +19,7 @@ class CustomSideBarMenu extends Component {
           screenToNavigate: 'Captcha',
         },
         {
-          navOptionThumb: 'md-calendar',
+          navOptionThumb: 'md-videocam',
           navOptionName: 'Movie Screen',
           screenToNavigate: 'Movie',
         },
@@ -29,9 +29,14 @@ class CustomSideBarMenu extends Component {
           screenToNavigate: 'WebView',
         },
         {
-            navOptionThumb: 'md-calendar',
-            navOptionName: 'Calendar Screen',
-            screenToNavigate: 'Calendar',
+          navOptionThumb: 'md-calendar',
+          navOptionName: 'Calendar Screen',
+          screenToNavigate: 'Calendar',
+        },
+        {
+          navOptionThumb: 'md-key',
+          navOptionName: 'Permission Screen',
+          screenToNavigate: 'Permission',
         },
       ];
     }

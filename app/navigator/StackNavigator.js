@@ -9,7 +9,7 @@ import TestWebView from '../screens/TestWebView';
 
 // Top Tab && Drawer Toggle
 import NavigationDrawerStructure from './DrawerToggle';
-import { TopTab, TopTabCalendar } from './TopTabNavigator';
+import { TopTab, TopTabCalendar, TopTabPermission } from './TopTabNavigator';
 
 // Details
 import SpoilerDetail from './../screens/details/spoilerDetail';
@@ -34,15 +34,13 @@ const StackSpoiler = createStackNavigator({
       headerTitle: "Trang chủ",
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#30336b',
       },
       headerTintColor: '#fff',
     })
   },
   SpoilerDetail
-}, {
-  headerLayoutPreset: 'center'
-});
+}, { headerLayoutPreset: 'center' });
 
 const StackCaptcha = createStackNavigator({
   TestReCaptcha: { 
@@ -51,14 +49,12 @@ const StackCaptcha = createStackNavigator({
       headerTitle: "Captcha Screen",
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#30336b',
       },
       headerTintColor: '#fff',
     }) 
   }
-}, {
-  headerLayoutPreset: 'center'
-});
+}, { headerLayoutPreset: 'center' });
 
 const StackMovie = createStackNavigator({
   TestMovieBooking: {
@@ -67,15 +63,13 @@ const StackMovie = createStackNavigator({
       headerTitle: "Movie Screen",
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#30336b',
       },
       headerTintColor: '#fff',
     })
   },
   MovieComfirm
-}, {
-  headerLayoutPreset: 'center'
-});
+}, { headerLayoutPreset: 'center' });
 
 const StackWebView = createStackNavigator({
   TestWebView: {
@@ -84,30 +78,40 @@ const StackWebView = createStackNavigator({
       headerTitle: "WebView Screen",
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#30336b',
       },
       headerTintColor: '#fff',
     })
   }
-}, {
-  headerLayoutPreset: 'center'
-});
+}, { headerLayoutPreset: 'center' });
 
 const StackCalendar = createStackNavigator({
   TopTabCalendar: { 
     screen: TopTabCalendar,
     navigationOptions: ({ navigation }) => ({
-      headerTitle: "Trang chủ",
+      headerTitle: "Calendar Screen",
       headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
       headerStyle: {
-        backgroundColor: '#FF9800',
+        backgroundColor: '#30336b',
       },
       headerTintColor: '#fff',
     })
   }
-}, {
-  headerLayoutPreset: 'center'
-});
+}, { headerLayoutPreset: 'center' });
+
+const StackPermission = createStackNavigator({
+  TopTabPermission: {
+    screen: TopTabPermission,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Permission Screen",
+      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerStyle: {
+        backgroundColor: '#30336b',
+      },
+      headerTintColor: '#fff',
+    })
+  }
+}, { headerLayoutPreset: 'center' });
 
 export {
   StackAuth,
@@ -115,5 +119,6 @@ export {
   StackCaptcha,
   StackMovie,
   StackWebView,
-  StackCalendar
+  StackCalendar,
+  StackPermission
 };

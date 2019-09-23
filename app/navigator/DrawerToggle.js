@@ -14,7 +14,7 @@ export default class NavigationDrawerStructure extends Component {
             name="md-menu"
             type="ionicon"
             size={25}
-            color="black"
+            color="white"
             backgroundColor="transparent"
             underlayColor="transparent"
             onPress={this.toggleDrawer.bind(this)}

@@ -1,7 +1,7 @@
 import { Dimensions } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer';
-import { StackSpoiler, StackCalendar, StackCaptcha, StackMovie, StackWebView, StackAuth } from './StackNavigator';
+import { StackSpoiler, StackCalendar, StackCaptcha, StackMovie, StackWebView, StackAuth, StackPermission } from './StackNavigator';
 import { CustomSideBarMenu, SideMenuSectioned } from './SideBarMenu';
 
 /** Flow Drawer */
@@ -10,7 +10,8 @@ const DrawerRoute = createDrawerNavigator({
     Captcha: StackCaptcha,
     Movie: StackMovie,
     WebView: StackWebView,
-    Calendar: StackCalendar
+    Calendar: StackCalendar,
+    Permission: StackPermission
   }, {
     initialRouteName: 'Spoiler',
     contentOptions: {

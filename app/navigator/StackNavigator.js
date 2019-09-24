@@ -6,6 +6,7 @@ import TestAppIntro from '../screens/TestAppIntro';
 import TestReCaptcha from '../screens/TestReCaptcha';
 import TestMovieBooking from '../screens/TestMovieBooking';
 import TestWebView from '../screens/TestWebView';
+import TestGoogleAnalytics from '../screens/TestGoogleAnalytics';
 
 // Top Tab && Drawer Toggle
 import NavigationDrawerStructure from './DrawerToggle';
@@ -113,6 +114,20 @@ const StackPermission = createStackNavigator({
   }
 }, { headerLayoutPreset: 'center' });
 
+const StackGoogleAnalytics = createStackNavigator({
+  TestGoogleAnalytics: {
+    screen: TestGoogleAnalytics,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Google Analytics Screen",
+      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerStyle: {
+        backgroundColor: '#30336b',
+      },
+      headerTintColor: '#fff',
+    })
+  }
+}, { headerLayoutPreset: 'center' });
+
 export {
   StackAuth,
   StackSpoiler,
@@ -120,5 +135,6 @@ export {
   StackMovie,
   StackWebView,
   StackCalendar,
-  StackPermission
+  StackPermission,
+  StackGoogleAnalytics
 };

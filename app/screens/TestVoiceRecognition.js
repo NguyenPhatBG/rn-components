@@ -11,6 +11,9 @@ import {
 import Voice from 'react-native-voice';
 
 export default class TestVoiceRecognition extends Component {
+    static navigationOptions = {
+      tabBarLabel: 'Voice Recognition',
+    };
     state = {
         pitch: '',
         error: '',
@@ -90,7 +93,7 @@ export default class TestVoiceRecognition extends Component {
         });
      
         try {
-          await Voice.start('en-US');
+          await Voice.start('vi'); // en-US
         } catch (e) {
           console.error(e);
         }
@@ -149,6 +152,7 @@ export default class TestVoiceRecognition extends Component {
                 <TouchableHighlight
                   onPress={this._startRecognizing}
                   style={{ marginVertical: 20 }}
+                  underlayColor="#95a5a6"
                 >
                   <Image
                     style={styles.button}

@@ -38,6 +38,11 @@ class CustomSideBarMenu extends Component {
           navOptionName: 'Permission Screen',
           screenToNavigate: 'Permission',
         },
+        {
+          navOptionThumb: 'md-analytics',
+          navOptionName: 'Google Analytics Screen',
+          screenToNavigate: 'GoogleAnalytics',
+        },
       ];
     }
     render () {

@@ -7,6 +7,7 @@ import TopTabThird from './../screens/tabs/TopTabThird';
 // Tabs Calendar
 import TestHorizontalCalendar from '../screens/TestHorizontalCalendar';
 import TestCalendarSelectPicker from '../screens/TestCalendarSelectPicker';
+import TestSimplerEventCalendar from '../screens/TestSimplerEventCalendar';
 // Tabs Permission
 import TestVoiceRecognition from '../screens/TestVoiceRecognition';
 
@@ -31,7 +32,7 @@ const topTabStyle = {
 
 /** Flow TOP TABs Stack */
 const TopTab = createMaterialTopTabNavigator({ TopTabFirst, TopTabSecond, TopTabThird } , topTabStyle);
-const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker } , topTabStyle);
+const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
 const TopTabPermission = createMaterialTopTabNavigator({ TestVoiceRecognition }, topTabStyle);
 
 export {

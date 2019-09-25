@@ -38,3 +38,5 @@ const styles = StyleSheet.create({
 });
 
 // https://reactnativecode.com/google-analytics-implement-in-react-native/
+// https://github.com/ayushinigam/react-native-google-analytics
+// https://dev-yakuza.github.io/en/react-native/react-native-analytics-bridge/

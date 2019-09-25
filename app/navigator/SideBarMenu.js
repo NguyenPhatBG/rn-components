@@ -43,6 +43,11 @@ class CustomSideBarMenu extends Component {
           navOptionName: 'Google Analytics Screen',
           screenToNavigate: 'GoogleAnalytics',
         },
+        {
+          navOptionThumb: 'md-link',
+          navOptionName: 'Deep Linking Screen',
+          screenToNavigate: 'DeepLinking',
+        },
       ];
     }
     render () {

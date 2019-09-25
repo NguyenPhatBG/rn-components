@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native';
+import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import CalendarPicker from 'react-native-calendar-picker';
 
 export default class TestCalendarSelectPicker extends Component {
@@ -37,7 +37,7 @@ export default class TestCalendarSelectPicker extends Component {
         const startDate = selectedStartDate ? selectedStartDate.toString() : ''; //Start date
         const endDate = selectedEndDate ? selectedEndDate.toString() : ''; //End date
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <CalendarPicker
                     startFromMonday={true}
                     allowRangeSelection={true}
@@ -73,7 +73,7 @@ export default class TestCalendarSelectPicker extends Component {
                     <Text style={{padding:10}}>SELECTED END DATE : </Text>
                     <Text style={{padding:10}}>{endDate}</Text>
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }

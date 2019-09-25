@@ -1,7 +1,17 @@
 import { Dimensions } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createDrawerNavigator } from 'react-navigation-drawer';
-import { StackSpoiler, StackCalendar, StackCaptcha, StackMovie, StackWebView, StackAuth, StackPermission, StackGoogleAnalytics } from './StackNavigator';
+import { 
+  StackSpoiler, 
+  StackCalendar, 
+  StackCaptcha, 
+  StackMovie, 
+  StackWebView, 
+  StackAuth, 
+  StackPermission, 
+  StackGoogleAnalytics,
+  StackTestDeepLinking 
+} from './StackNavigator';
 import { CustomSideBarMenu, SideMenuSectioned } from './SideBarMenu';
 
 /** Flow Drawer */
@@ -12,7 +22,8 @@ const DrawerRoute = createDrawerNavigator({
     WebView: StackWebView,
     Calendar: StackCalendar,
     Permission: StackPermission,
-    GoogleAnalytics: StackGoogleAnalytics
+    GoogleAnalytics: StackGoogleAnalytics,
+    DeepLinking: StackTestDeepLinking
   }, {
     initialRouteName: 'Spoiler',
     contentOptions: {
@@ -23,6 +34,6 @@ const DrawerRoute = createDrawerNavigator({
 });
 
 export default SwitchRoute = createAppContainer(createSwitchNavigator({
-  stackRouter: StackAuth,
+  // stackRouter: StackAuth,
   drawerRouter: DrawerRoute
 }));

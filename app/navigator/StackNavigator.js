@@ -7,6 +7,7 @@ import TestReCaptcha from '../screens/TestReCaptcha';
 import TestMovieBooking from '../screens/TestMovieBooking';
 import TestWebView from '../screens/TestWebView';
 import TestGoogleAnalytics from '../screens/TestGoogleAnalytics';
+import TestDeepLinking from '../screens/TestDeepLinking';
 
 // Top Tab && Drawer Toggle
 import NavigationDrawerStructure from './DrawerToggle';
@@ -128,6 +129,21 @@ const StackGoogleAnalytics = createStackNavigator({
   }
 }, { headerLayoutPreset: 'center' });
 
+const StackTestDeepLinking = createStackNavigator({
+  TestDeepLinking: {
+    screen: TestDeepLinking, 
+    path: 'testdeeplinking/:id',
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Deep Linking Screen",
+      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerStyle: {
+        backgroundColor: '#30336b',
+      },
+      headerTintColor: '#fff',
+    })
+  }
+}, { headerLayoutPreset: 'center' });
+
 export {
   StackAuth,
   StackSpoiler,
@@ -136,5 +152,6 @@ export {
   StackWebView,
   StackCalendar,
   StackPermission,
-  StackGoogleAnalytics
+  StackGoogleAnalytics,
+  StackTestDeepLinking
 };

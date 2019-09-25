@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 import { YellowBox } from 'react-native';
 import SwitchRoute from './app/navigator/RootNavigator';
 
+const prefix = 'myapp://';
+
 class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class App extends PureComponent {
   componentDidMount() {}
 
   render() {
-    return <SwitchRoute />;
+    return <SwitchRoute uriPrefix={prefix} />;
   }
 };
 

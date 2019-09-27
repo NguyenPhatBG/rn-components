@@ -69,7 +69,7 @@ export default class QRCodeScreen extends Component { // QRCode Scanner
                         onBottomButtonPressed={event => this.onBottomButtonPressed(event)}
                         styles={StyleSheet.absoluteFill}
                         hideControls={false}
-                        // showFrame={true}
+                        // showFrame={true} have an error
                         offsetForScannerFrame={width * 0.1}
                         heightForScannerFrame={width * 0.8}
                         colorForScannerFrame={"red"}

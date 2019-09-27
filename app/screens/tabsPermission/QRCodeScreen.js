@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Platform, StyleSheet, TouchableOpacity, Text, Linking, Dimensions } from 'react-native';
 import { CameraKitCameraScreen } from 'react-native-camera-kit';
+import QRCode from 'react-native-qrcode-svg';
 import { requestCameraPermission } from '../../utils/permissions';
 const { width } = Dimensions.get("window");
 
@@ -43,6 +44,8 @@ export default class QRCodeScreen extends Component { // QRCode Scanner
         if (!this.state.Start_Scanner) {
             return (
                 <View style={styles.container}>
+                    <Text style={styles.textResult}>Create QRCode: </Text>
+                    <QRCode value={this.state.QR_Code_Value ? this.state.QR_Code_Value : "default" } />
                     <Text style={styles.textResult}>
                         {this.state.QR_Code_Value ? 'Scanned QR Code: ' + this.state.QR_Code_Value : ''}
                     </Text>

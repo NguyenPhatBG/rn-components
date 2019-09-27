@@ -80,3 +80,12 @@ export default App;
    * Download Image
    * Upload Image
    */
+
+  // react-native unlink react-native-camera-kit
+  // react-native unlink react-native-gesture-handler
+  // react-native unlink react-native-google-analytics-bridge
+  // react-native unlink react-native-reanimated
+  // react-native unlink react-native-vector-icons
+  // react-native unlink react-native-voice
+  // react-native unlink react-native-webview
+  // react-native unlink rn-fetch-blob

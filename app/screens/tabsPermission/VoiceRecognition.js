@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import Voice from 'react-native-voice';
 
-export default class TestVoiceRecognition extends Component {
+export default class VoiceRecognition extends Component {
     static navigationOptions = {
       tabBarLabel: 'Voice Recognition',
     };

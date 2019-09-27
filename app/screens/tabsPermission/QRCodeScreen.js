@@ -4,7 +4,7 @@ import { CameraKitCameraScreen } from 'react-native-camera-kit';
 import { requestCameraPermission } from '../../utils/permissions';
 const { width } = Dimensions.get("window");
 
-export default class TopTabSecond extends Component { // QRCode Scanner
+export default class QRCodeScreen extends Component { // QRCode Scanner
     static navigationOptions = {
         tabBarLabel: 'QR Code',
     };
@@ -105,4 +105,3 @@ const styles = StyleSheet.create({
     }
 });
     // https://reactnativecode.com/qr-code-scanner-app-using-camera/
-    // https://reactnativecode.com/download-image-from-url-into-gallery-folder/

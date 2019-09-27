@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TestSpoiler from './../TestSpoiler';
+import TestSpoiler from '../TestSpoiler';
 
 export default class TopTabFirst extends Component {
     static navigationOptions = {

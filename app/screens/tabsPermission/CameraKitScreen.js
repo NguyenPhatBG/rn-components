@@ -3,7 +3,7 @@ import { View, Platform, StyleSheet, TouchableOpacity, Alert, Text } from 'react
 import { CameraKitCameraScreen } from 'react-native-camera-kit';
 import { requestCameraPermission, requestExternalWritePermission, requestExternalReadPermission } from '../../utils/permissions';
 
-export default class TopTabThird extends Component {
+export default class CameraKitScreen extends Component {
     static navigationOptions = {
         tabBarLabel: 'Camera Kit',
     };

@@ -1,15 +1,16 @@
+import { Dimensions } from 'react-native';
 import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
-
 // Tabs
-import TopTabFirst from './../screens/tabs/TopTabFirst';
-import TopTabSecond from './../screens/tabs/TopTabSecond';
-import TopTabThird from './../screens/tabs/TopTabThird';
+import TopTabFirst from '../screens/tabsSpoiler/TopTabFirst';
 // Tabs Calendar
 import TestHorizontalCalendar from '../screens/TestHorizontalCalendar';
 import TestCalendarSelectPicker from '../screens/TestCalendarSelectPicker';
 import TestSimplerEventCalendar from '../screens/TestSimplerEventCalendar';
 // Tabs Permission
-import TestVoiceRecognition from '../screens/TestVoiceRecognition';
+import VoiceRecognition from '../screens/tabsPermission/VoiceRecognition';
+import QRCodeScreen from '../screens/tabsPermission/QRCodeScreen';
+import CameraKitScreen from '../screens/tabsPermission/CameraKitScreen';
+import DownloadImage from '../screens/tabsPermission/DownloadImage';
 
 const topTabStyle = {
     lazy: true,
@@ -17,6 +18,10 @@ const topTabStyle = {
     tabBarOptions: {
         activeTintColor: '#FFFFFF',
         inactiveTintColor: '#F8F8F8',
+        scrollEnabled: true, 
+        tabStyle: {
+            width: (Dimensions.get('window').width / 3),
+        },
         style: {
             backgroundColor: '#30336b',
         },
@@ -31,9 +36,9 @@ const topTabStyle = {
 };
 
 /** Flow TOP TABs Stack */
-const TopTab = createMaterialTopTabNavigator({ TopTabFirst, TopTabSecond, TopTabThird } , topTabStyle);
+const TopTab = createMaterialTopTabNavigator({ TopTabFirst } , topTabStyle);
 const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
-const TopTabPermission = createMaterialTopTabNavigator({ TestVoiceRecognition }, topTabStyle);
+const TopTabPermission = createMaterialTopTabNavigator({ VoiceRecognition, QRCodeScreen, CameraKitScreen, DownloadImage }, topTabStyle);
 
 export {
     TopTab,

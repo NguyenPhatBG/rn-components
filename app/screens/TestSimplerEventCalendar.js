@@ -53,22 +53,22 @@ export default class TestSimplerEventCalendar extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, marginTop: 20 }}>
+            <View style={{ flex: 1 }}>
                 <EventCalendar
-                eventTapped={this.eventClicked.bind(this)}
-                //Function on event press
-                events={this.state.events}
-                //passing the Array of event
-                width={width}
-                //Container width
-                size={60}
-                //number of date will render before and after initDate 
-                //(default is 30 will render 30 day before initDate and 29 day after initDate)
-                initDate={'2019-01-01'}
-                //show initial date (default is today)
-                scrollToFirst
-                //scroll to first event of the day (default true)
-                />
+                  eventTapped={this.eventClicked.bind(this)}
+                  //Function on event press
+                  events={this.state.events}
+                  //passing the Array of event
+                  width={width}
+                  //Container width
+                  size={60}
+                  //number of date will render before and after initDate 
+                  //(default is 30 will render 30 day before initDate and 29 day after initDate)
+                  initDate={'2019-01-01'}
+                  //show initial date (default is today)
+                  scrollToFirst
+                  //scroll to first event of the day (default true)
+              />
           </View>
         );
     }

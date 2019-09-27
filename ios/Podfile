@@ -39,6 +39,8 @@ target 'rnapp' do
 
   pod 'react-native-google-analytics-bridge', :path => '../node_modules/react-native-google-analytics-bridge'
 
+  pod 'react-native-camera-kit', :path => '../node_modules/react-native-camera-kit'
+
   target 'rnappTests' do
     inherit! :search_paths
     # Pods for testing

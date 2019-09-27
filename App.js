@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { YellowBox } from 'react-native';
+import { YellowBox, StatusBar, View, Platform, SafeAreaView } from 'react-native';
 import SwitchRoute from './app/navigator/RootNavigator';
 
 const prefix = 'myapp://';
@@ -14,10 +14,17 @@ class App extends PureComponent {
     ]);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    StatusBar.setTranslucent(true);
+    StatusBar.setBackgroundColor('#30336b');
+  }
 
   render() {
-    return <SwitchRoute uriPrefix={prefix} />;
+    return (
+      <View style={{ flex: 1, paddingTop: (Platform.OS === 'android' ? StatusBar.currentHeight : 0) }}>
+        <SwitchRoute uriPrefix={prefix} />
+      </View>
+    );
   }
 };
 
@@ -60,3 +67,16 @@ export default App;
   * 7. Video
   * 8. Music
   */
+
+  /** Phone
+   * Get List Contacts
+   * Show List Contacts
+   * Add List Contacts
+   */
+
+  /** Camera
+   * QRcode
+   * Camera Kit
+   * Download Image
+   * Upload Image
+   */

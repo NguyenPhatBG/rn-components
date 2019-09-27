@@ -4003,7 +4003,7 @@ lodash.unescape@4.0.1:
   resolved "https://registry.yarnpkg.com/lodash.unescape/-/lodash.unescape-4.0.1.tgz#bf2249886ce514cda112fae9218cdc065211fc9c"
   integrity sha1-vyJJiGzlFM2hEvrpIYzcBlIR/Jw=
 
-lodash@^4.0.0, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
+lodash@^4.0.0, lodash@^4.14.2, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0, lodash@^4.6.1:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
@@ -5258,6 +5258,13 @@ react-native-calendar-picker@^6.0.1:
   dependencies:
     prop-types "^15.6.0"
     uuid "3.2.1"
+
+react-native-camera-kit@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-camera-kit/-/react-native-camera-kit-8.0.1.tgz#8b7b25d88c7e944d0a12857ddca5c889cb8c99fe"
+  integrity sha512-BMXqX4IwUX82u+v1qXIgBNqBmPzhwHhlYascX4sz+zNrwAA1476bpGmsJwZdsc6mm3SBSeNaa4pf2pGVDr6WUw==
+  dependencies:
+    lodash "^4.14.2"
 
 react-native-events-calendar@^1.0.8:
   version "1.0.8"

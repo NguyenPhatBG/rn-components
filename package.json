@@ -20,6 +20,7 @@
     "react-native-events-calendar": "^1.0.8",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-google-analytics-bridge": "^7.1.0",
+    "react-native-image-picker": "^1.1.0",
     "react-native-reanimated": "^1.2.0",
     "react-native-vector-icons": "^6.6.0",
     "react-native-voice": "^0.3.0",

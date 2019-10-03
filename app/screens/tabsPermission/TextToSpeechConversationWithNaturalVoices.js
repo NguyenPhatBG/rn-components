@@ -201,3 +201,4 @@ const styles = StyleSheet.create({
         height: 40,
     },
 });
+// https://aboutreact.com/react-native-text-to-speech/

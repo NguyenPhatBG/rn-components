@@ -5313,6 +5313,11 @@ react-native-camera-kit@^8.0.1:
   dependencies:
     lodash "^4.14.2"
 
+react-native-communications@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-communications/-/react-native-communications-2.2.1.tgz#7883b56b20a002eeb790c113f8616ea8692ca795"
+  integrity sha1-eIO1ayCgAu63kMET+GFuqGksp5U=
+
 react-native-events-calendar@^1.0.8:
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/react-native-events-calendar/-/react-native-events-calendar-1.0.8.tgz#e0e15179d025fe1c0ea923308218497c79d65945"

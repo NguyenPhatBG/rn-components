@@ -13,6 +13,7 @@ import QRCodeScreen from '../screens/tabsPermission/QRCodeScreen';
 import CameraKitScreen from '../screens/tabsPermission/CameraKitScreen';
 import VoiceRecognition from '../screens/tabsPermission/VoiceRecognition';
 import TextToSpeechConversationWithNaturalVoices from '../screens/tabsPermission/TextToSpeechConversationWithNaturalVoices';
+import PhoneCallAndEmailAndSMS from '../screens/tabsPermission/PhoneCall&Email&SMS';
 
 const topTabStyle = {
     lazy: true,
@@ -40,7 +41,7 @@ const topTabStyle = {
 /** Flow TOP TABs Stack */
 const TopTab = createMaterialTopTabNavigator({ TopTabFirst } , topTabStyle);
 const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
-const TopTabPermission = createMaterialTopTabNavigator({ UploadImageToServer, DownloadImage, QRCodeScreen, CameraKitScreen, VoiceRecognition, TextToSpeechConversationWithNaturalVoices }, topTabStyle);
+const TopTabPermission = createMaterialTopTabNavigator({ UploadImageToServer, DownloadImage, CameraKitScreen, PhoneCallAndEmailAndSMS, QRCodeScreen, VoiceRecognition, TextToSpeechConversationWithNaturalVoices }, topTabStyle);
 
 export {
     TopTab,

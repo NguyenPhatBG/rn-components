@@ -62,8 +62,28 @@ const requestExternalReadPermission = async (callback) => {
     }
 }
 
+const requestLocationPermission = async (callback) => {
+    try {
+        const granted = await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION, {
+                'title': 'Location Access Required',
+                'message': 'Rn-Components needs to Access your location'
+            }
+        );
+        if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+            // To check, If Permission is granted
+            callback();
+        } else {
+            alert('Permission Denied');
+        }
+    } catch(error) {
+        alert('Request Location Error', error);
+    }
+}
+
 export {
     requestCameraPermission,
     requestExternalReadPermission,
-    requestExternalWritePermission
+    requestExternalWritePermission,
+    requestLocationPermission
 };

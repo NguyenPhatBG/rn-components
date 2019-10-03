@@ -11,7 +11,7 @@ import TestDeepLinking from '../screens/TestDeepLinking';
 
 // Top Tab && Drawer Toggle
 import NavigationDrawerStructure from './DrawerToggle';
-import { TopTab, TopTabCalendar, TopTabPermission } from './TopTabNavigator';
+import { TopTab, TopTabGoogleMap, TopTabCalendar, TopTabPermission } from './TopTabNavigator';
 
 // Details
 import SpoilerDetail from './../screens/details/spoilerDetail';
@@ -115,6 +115,20 @@ const StackPermission = createStackNavigator({
   }
 }, { headerLayoutPreset: 'center' });
 
+const StackGoogleMap = createStackNavigator({
+  TopTabGoogleMap: {
+    screen: TopTabGoogleMap,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Location Screen",
+      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerStyle: {
+        backgroundColor: '#30336b',
+      },
+      headerTintColor: '#fff',
+    })
+  }
+}, { headerLayoutPreset: 'center' });
+
 const StackGoogleAnalytics = createStackNavigator({
   TestGoogleAnalytics: {
     screen: TestGoogleAnalytics,
@@ -151,6 +165,7 @@ export {
   StackMovie,
   StackWebView,
   StackCalendar,
+  StackGoogleMap,
   StackPermission,
   StackGoogleAnalytics,
   StackTestDeepLinking

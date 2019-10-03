@@ -923,6 +923,11 @@
     eslint-plugin-react-native "3.6.0"
     prettier "1.16.4"
 
+"@react-native-community/geolocation@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/@react-native-community/geolocation/-/geolocation-2.0.2.tgz#ba8b40f560ead8d014740d1cdea970b33f19312e"
+  integrity sha512-tTNXRCgnhJBu79mulQwzabXRpDqfh/uaDqfHVpvF0nX4NTpolpy6mvTRiFg7eWFPGRArsnZz1EYp6rHfJWGgEA==
+
 "@react-native-community/slider@^2.0.1":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-2.0.1.tgz#2ab0cd52d3ab30ef4f6d838159590e2ccdf7803a"
@@ -5345,6 +5350,11 @@ react-native-image-picker@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-1.1.0.tgz#c2a0523886edb4cf2cdc008ad0a71433142a4d53"
   integrity sha512-/KjHf4NNAjl6XM7FQuqvGDz1wB9sRdLf86+2yksLW/QTRR7CitX4TLCM8ZF9CX6Y0MsCTndkZia3zWE+nt/GiA==
+
+react-native-maps@0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.26.0.tgz#dd991fa55ef4d49958ca28b8d61af871bf4f6812"
+  integrity sha512-WX26b/ZuAGwkhtbWPYBQDxMYf41gug7tRNHJsE6V/FigBNHB4JYEDq3fy8YttOVxPdthG5slUH1Dsm+tzMWjGw==
 
 react-native-qrcode-svg@^5.2.0:
   version "5.2.0"

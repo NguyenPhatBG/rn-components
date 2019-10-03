@@ -8,6 +8,7 @@ import {
   StackMovie, 
   StackWebView, 
   StackAuth, 
+  StackGoogleMap,
   StackPermission, 
   StackGoogleAnalytics,
   StackTestDeepLinking 
@@ -21,6 +22,7 @@ const DrawerRoute = createDrawerNavigator({
     Movie: StackMovie,
     WebView: StackWebView,
     Calendar: StackCalendar,
+    GoogleMap: StackGoogleMap,
     Permission: StackPermission,
     GoogleAnalytics: StackGoogleAnalytics,
     DeepLinking: StackTestDeepLinking

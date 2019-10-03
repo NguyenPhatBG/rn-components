@@ -34,6 +34,11 @@ class CustomSideBarMenu extends Component {
           screenToNavigate: 'Calendar',
         },
         {
+          navOptionThumb: 'md-map',
+          navOptionName: 'Google Map Screen',
+          screenToNavigate: 'GoogleMap',
+        },
+        {
           navOptionThumb: 'md-key',
           navOptionName: 'Permission Screen',
           screenToNavigate: 'Permission',
@@ -65,7 +70,7 @@ class CustomSideBarMenu extends Component {
           <View style={sideMenuOptionContainer}>
             {
               this.items.map((item, key) => (
-                <View key={key} style={[sideMenuOptions, { backgroundColor: global.currentScreenIndex === key ? '#e0dbdb' : '#ffffff' }]}>
+                <ScrollView key={key} contentContainerStyle={[sideMenuOptions, { backgroundColor: global.currentScreenIndex === key ? '#e0dbdb' : '#ffffff' }]}>
                   <View style={sideMenuIconContainer}>
                     <Icon name={item.navOptionThumb} size={25} color="#808080" />
                   </View>
@@ -78,7 +83,7 @@ class CustomSideBarMenu extends Component {
                   >
                     {item.navOptionName}
                   </Text>
-                </View>
+                </ScrollView>
               ))
             }
           </View>

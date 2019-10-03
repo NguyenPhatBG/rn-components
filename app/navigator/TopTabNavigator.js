@@ -14,6 +14,9 @@ import CameraKitScreen from '../screens/tabsPermission/CameraKitScreen';
 import VoiceRecognition from '../screens/tabsPermission/VoiceRecognition';
 import TextToSpeechConversationWithNaturalVoices from '../screens/tabsPermission/TextToSpeechConversationWithNaturalVoices';
 import PhoneCallAndEmailAndSMS from '../screens/tabsPermission/PhoneCall&Email&SMS';
+// Tabs Google Map
+import GetCurrentPosition from '../screens/tabsGoogleMap/getCurrentPosition';
+import VisibleGoogleMap from '../screens/tabsGoogleMap/visibleGoogleMap';
 
 const topTabStyle = {
     lazy: true,
@@ -40,11 +43,13 @@ const topTabStyle = {
 
 /** Flow TOP TABs Stack */
 const TopTab = createMaterialTopTabNavigator({ TopTabFirst } , topTabStyle);
+const TopTabGoogleMap = createMaterialTopTabNavigator({ GetCurrentPosition, VisibleGoogleMap } , topTabStyle);
 const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
 const TopTabPermission = createMaterialTopTabNavigator({ UploadImageToServer, DownloadImage, CameraKitScreen, PhoneCallAndEmailAndSMS, QRCodeScreen, VoiceRecognition, TextToSpeechConversationWithNaturalVoices }, topTabStyle);
 
 export {
     TopTab,
+    TopTabGoogleMap,
     TopTabCalendar,
     TopTabPermission
 };

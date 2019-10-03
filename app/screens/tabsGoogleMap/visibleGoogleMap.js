@@ -1,4 +1,4 @@
-import React, { Component } from 'reacct';
+import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 
 export default class VisibleGoogleMap extends Component {

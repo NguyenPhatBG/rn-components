@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
 import { View, Text, StyleSheet, Platform, Image, InteractionManager, ActivityIndicator } from 'react-native';
 import Geolocation from '@react-native-community/geolocation';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import { requestLocationPermission } from '../../utils/permissions';
 
 export default class GetCurrentPosition extends Component {
     state = {
-        isLoading: true,
-        currentLongitude: 'unknown', // Initial Longitude
-        currentLatitude: 'unknown', // Initial Latitude
+        currentLongitude: '', // Initial Longitude
+        currentLatitude: '', // Initial Latitude
     };
 
     componentDidMount() {
         var that = this;
-        this.setState({ isLoading: false });
         InteractionManager.runAfterInteractions(() => {
             if (Platform.OS === 'ios') {
                 this.callLocation(that);
@@ -37,7 +36,6 @@ export default class GetCurrentPosition extends Component {
         );
         that.watchID = Geolocation.watchPosition(
             (position) => {
-                console.log(position);
                 const currentLongitude = JSON.stringify(position.coords.longitude);
                 const currentLatitude = JSON.stringify(position.coords.latitude);
                 that.setState({  currentLongitude, currentLatitude });
@@ -50,41 +48,37 @@ export default class GetCurrentPosition extends Component {
     }
 
     render() {
-        if (this.state.isLoading) {
-            return <ActivityIndicator size="large" animating={this.state.isLoading} />
-        } else {
-            return (
-                <View style = {styles.container}>
-                    <Image
-                        source={{uri:'https://png.icons8.com/dusk/100/000000/compass.png'}}
-                        style={{width: 100, height: 100}}
-                    />
-                    <Text style = {styles.boldText}>
-                        You are Here
-                    </Text>
-                    <Text style={{justifyContent:'center',alignItems: 'center',marginTop:16}}>
-                        Longitude: {this.state.currentLongitude}
-                    </Text>
-                    <Text style={{justifyContent:'center',alignItems: 'center',marginTop:16}}>
-                        Latitude: {this.state.currentLatitude}
-                    </Text>
-                </View>
-            );
-        }
+        const { currentLatitude, currentLongitude } = this.state;
+        return (
+            <View style={styles.container}>
+                <MapView
+                    provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                    style={styles.map}
+                    region={{
+                        latitude: Number(currentLatitude),
+                        longitude: Number(currentLongitude),
+                        latitudeDelta: 0.015,
+                        longitudeDelta: 0.0121,
+                    }}
+                >
+                </MapView>
+            </View>
+        );
     }
 }
 
 const styles = StyleSheet.create ({
     container: {
-       flex: 1,
-       alignItems: 'center',
-       justifyContent:'center',
-       marginTop: 50,
-       padding:16,
-       backgroundColor:'white'
+        ...StyleSheet.absoluteFillObject,
+        height: 400,
+        width: 400,
+        justifyContent: 'flex-end',
+        alignItems: 'center',
     },
-    boldText: {
-       fontSize: 30,
-       color: 'red',
-    }
+    map: {
+        ...StyleSheet.absoluteFillObject,
+    },
 });
+// https://console.cloud.google.com/apis/credentials
+// https://github.com/novalabio/react-native-maps-super-cluster
+// https://github.com/react-native-community/react-native-maps/issues/209#issuecomment-350907665

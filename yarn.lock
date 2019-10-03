@@ -5303,6 +5303,11 @@ react-native-app-intro-slider@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-native-app-intro-slider/-/react-native-app-intro-slider-3.0.0.tgz#c3620b967503ce410b3d767252392bb6fb2edf97"
   integrity sha512-2XXUYnSeMYZTLhdRYHSwv8mhoyuEaYxmQfXrWQInH1QvjsnJtKgvORI3bJuJN+tNPg3aut6JYYCNOFsI5of32A==
 
+react-native-bootsplash@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-1.0.3.tgz#c0fbf46ba333b7bba880a430f4449aad0c04953a"
+  integrity sha512-YQ1sBlx+m5p41f0RPAbZ8v3i1YpbCylUbjLXeXWpi2mwmG5FE3NN6IO+GN1MTZWiqD7CtuucCp/dYBxmdL5Y2g==
+
 react-native-calendar-picker@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/react-native-calendar-picker/-/react-native-calendar-picker-6.0.1.tgz#28e7fa06f7a08a35586084496950df142fa5b05a"
@@ -5355,6 +5360,11 @@ react-native-maps@0.26.0:
   version "0.26.0"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.26.0.tgz#dd991fa55ef4d49958ca28b8d61af871bf4f6812"
   integrity sha512-WX26b/ZuAGwkhtbWPYBQDxMYf41gug7tRNHJsE6V/FigBNHB4JYEDq3fy8YttOVxPdthG5slUH1Dsm+tzMWjGw==
+
+react-native-modalize@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-modalize/-/react-native-modalize-1.2.1.tgz#7c42f5ed22e1fa21314afa5b634c7e39d514a9f9"
+  integrity sha512-j3+uJB0UtlSeQbwDZ+DEcvyUYN4vfZt4bczwPdG2NAoMbePSNV4iWcD6co0UonDuHZAcD0G9xZU6PU/wSGjGRQ==
 
 react-native-qrcode-svg@^5.2.0:
   version "5.2.0"

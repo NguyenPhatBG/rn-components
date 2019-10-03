@@ -1,5 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, useEffect } from 'react';
 import { YellowBox, StatusBar, View, Platform, SafeAreaView } from 'react-native';
+import RNBootSplash from "react-native-bootsplash";
 import SwitchRoute from './app/navigator/RootNavigator';
 
 const prefix = 'myapp://';
@@ -17,6 +18,7 @@ class App extends PureComponent {
   componentDidMount() {
     StatusBar.setTranslucent(true);
     StatusBar.setBackgroundColor('#30336b');
+    RNBootSplash.hide({ duration: 250 });
   }
 
   render() {

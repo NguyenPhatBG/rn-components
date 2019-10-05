@@ -70,14 +70,14 @@ export default App;
 
  /**
   * D. Other 
-  * 1. Socket.io
-  * 2. Websocket
+  * 1. Socket.io (done)
+  * 2. Websocket (done)
   * 3. WebRTC
   * 4. SIP.js
-  * 5. QRCode
-  * 6. Voice // https://github.com/dev-yakuza/react_native_voice_exercise/blob/master/src/App.tsx
+  * 5. QRCode (done)
+  * 6. Voice // https://github.com/dev-yakuza/react_native_voice_exercise/blob/master/src/App.tsx (done)
   * 7. Video
-  * 8. Music
+  * 8. Music (processing)
   */
 
   /**

@@ -67,10 +67,10 @@ class CustomSideBarMenu extends Component {
           {/** Divider Top Image and SideBar Options */}
           <View style={sideMenuDivider} />
           {/** SideBar Options */}
-          <View style={sideMenuOptionContainer}>
+          <ScrollView contentContainerStyle={sideMenuOptionContainer}>
             {
               this.items.map((item, key) => (
-                <ScrollView key={key} contentContainerStyle={[sideMenuOptions, { backgroundColor: global.currentScreenIndex === key ? '#e0dbdb' : '#ffffff' }]}>
+                <View key={key} style={[sideMenuOptions, { backgroundColor: global.currentScreenIndex === key ? '#e0dbdb' : '#ffffff' }]}>
                   <View style={sideMenuIconContainer}>
                     <Icon name={item.navOptionThumb} size={25} color="#808080" />
                   </View>
@@ -83,10 +83,10 @@ class CustomSideBarMenu extends Component {
                   >
                     {item.navOptionName}
                   </Text>
-                </ScrollView>
+                </View>
               ))
             }
-          </View>
+          </ScrollView>
         </View>
       );
     }

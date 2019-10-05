@@ -1,9 +1,17 @@
 import React, { PureComponent, useEffect } from 'react';
-import { YellowBox, StatusBar, View, Platform, SafeAreaView } from 'react-native';
+import { YellowBox, StatusBar, Platform, SafeAreaView } from 'react-native';
 import RNBootSplash from "react-native-bootsplash";
+import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components/native';
 import SwitchRoute from './app/navigator/RootNavigator';
+import Themes from './app/shared/Themes';
 
 const prefix = 'myapp://';
+
+const Container = styled.View`
+  flex: 1;
+  padding-top: ${(props) => props.paddingTop}
+`;
 
 class App extends PureComponent {
   constructor(props) {
@@ -23,9 +31,11 @@ class App extends PureComponent {
 
   render() {
     return (
-      <View style={{ flex: 1, paddingTop: (Platform.OS === 'android' ? StatusBar.currentHeight : 0) }}>
-        <SwitchRoute uriPrefix={prefix} />
-      </View>
+      <ThemeProvider theme={Themes}>
+        <Container paddingTop={(Platform.OS === 'android' ? StatusBar.currentHeight : 0)}>
+          <SwitchRoute uriPrefix={prefix} />
+        </Container>
+      </ThemeProvider>
     );
   }
 };
@@ -69,6 +79,11 @@ export default App;
   * 7. Video
   * 8. Music
   */
+
+  /**
+   * Voice
+   * Text to Speech
+   */
 
   /** Phone
    * Get List Contacts

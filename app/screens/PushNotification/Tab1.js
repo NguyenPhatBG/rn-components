@@ -1,21 +1,51 @@
 import React, { Component } from 'react';
-import { TextInput, StyleSheet, Text, View, TouchableOpacity, Alert } from 'react-native';
+import { TextInput, StyleSheet, Text, View, TouchableOpacity, Alert, ScrollView, FlatList } from 'react-native';
 import NotifService from '../PushNotification/PushController';
 import appConfig from '../../../app.json';
 
-export default class TopTabNoti extends Component {
+export default class TopTabNoti01 extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      senderId: appConfig.senderID
+      senderId: appConfig.senderID,
+      pushData: []
     };
 
     this.notif = new NotifService(this.onRegister.bind(this), this.onNotif.bind(this));
   }
 
+  onRegister(token) {
+    Alert.alert("Registered !", JSON.stringify(token));
+    this.setState({ registerToken: token.token, gcmRegistered: true });
+  }
+
+  onNotif(notif) {
+    this._addDataToList(notif);
+  }
+
+  handlePerm(perms) {
+    Alert.alert("Permissions", JSON.stringify(perms));
+  }
+
+  _renderItem = ({ item }) => (
+    <View key={item.title}>
+      <Text style={styles.title}>{item.title}</Text>
+      <Text style={styles.message}>{item.message}</Text>
+    </View>
+  );
+
+  _addDataToList(data) {
+    let array = this.state.pushData;
+    array.push(data);
+    this.setState({
+      pushData: array
+    });
+    console.log(this.state);
+  }
+
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView scrollEnabled contentContainerStyle={styles.container}>
         <Text style={styles.title}>Example app react-native-push-notification</Text>
         <View style={styles.spacer}></View>
         <TextInput style={styles.textField} value={this.state.registerToken} placeholder="Register token" />
@@ -33,31 +63,30 @@ export default class TopTabNoti extends Component {
         {this.state.gcmRegistered && <Text>GCM Configured !</Text>}
 
         <View style={styles.spacer}></View>
-      </View>
+        <View style={styles.listHeader}>
+          <Text>Push Notifications</Text>
+        </View>
+        <View style={styles.body}>
+          {(this.state.pushData.length != 0) && <FlatList
+            data={this.state.pushData}
+            renderItem={(item) => this._renderItem(item)}
+            keyExtractor={(item) => item.title}
+            extraData = {this.state}
+          />
+          }
+          {(this.state.pushData.length == 0) &&
+            <View style={styles.noData}>
+              <Text style={styles.noDataText}>You don't have any push notification yet. Send some push to show it in the list</Text>
+            </View>}
+        </View>
+      </ScrollView>
     );
-  }
-
-  onRegister(token) {
-    Alert.alert("Registered !", JSON.stringify(token));
-    console.log(token);
-    this.setState({ registerToken: token.token, gcmRegistered: true });
-  }
-
-  onNotif(notif) {
-    console.log(notif);
-    Alert.alert(notif.title, notif.message);
-  }
-
-  handlePerm(perms) {
-    Alert.alert("Permissions", JSON.stringify(perms));
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    flexGrow: 1,
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
@@ -89,5 +118,29 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 20,
     textAlign: "center",
-  }
+  },
+  listHeader: {
+    backgroundColor: '#eee',
+    color: "#222",
+    height: 44,
+    padding: 12
+  },
+  noData: {
+    paddingVertical: 50,
+  },
+  noDataText: {
+    fontSize: 14,
+    textAlign: 'center',
+  },
+  message: {
+    fontSize: 14,
+    paddingBottom: 15,
+    borderBottomColor: "#ccc",
+    borderBottomWidth: 1
+  },
+  body: {
+    flex: 1,
+    paddingHorizontal: 20,
+    paddingVertical: 10,
+  },
 });

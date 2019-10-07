@@ -74,15 +74,18 @@ export default App;
   * 2. Websocket (done)
   * 3. WebRTC
   * 4. SIP.js
-  * 5. QRCode (done)
-  * 6. Voice // https://github.com/dev-yakuza/react_native_voice_exercise/blob/master/src/App.tsx (done)
-  * 7. Video
-  * 8. Music (processing)
   */
 
   /**
    * Voice
-   * Text to Speech
+   * 1. Text to Speech Conversation
+   * 2. Voice Recognition
+   */
+
+  /**
+   * Video & Music
+   * 1. Music
+   * 2. Video
    */
 
   /** Phone
@@ -92,17 +95,14 @@ export default App;
    */
 
   /** Camera
-   * QRcode
+   * QRcode (Create & Scanner)
    * Camera Kit
    * Download Image
    * Upload Image
    */
 
-  // react-native unlink react-native-camera-kit
-  // react-native unlink react-native-gesture-handler
-  // react-native unlink react-native-google-analytics-bridge
-  // react-native unlink react-native-reanimated
-  // react-native unlink react-native-vector-icons
-  // react-native unlink react-native-voice
-  // react-native unlink react-native-webview
-  // react-native unlink rn-fetch-blob
+  /**
+   * Google Maps
+   * 1. Display Google Map
+   * 2. Custom Google Map
+   */

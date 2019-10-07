@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default class SpoilerDetail extends Component {
-    state = {  }
     render() {
+        const { navigation } = this.props;
+        const { getParam } = navigation;
+        let title = getParam('title');
+        let message = getParam('message');
         return (
-            <View style={{ flex: 1, backgroundColor: '#27ae60' }} />
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#27ae60' }}>
+                <Text>{title}</Text>
+                <Text>{message}</Text>
+            </View>
         );
     }
 }

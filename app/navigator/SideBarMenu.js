@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView, StyleSheet } from 'react-native';
+import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 // Custom SideBar Drawer
 class CustomSideBarMenu extends Component {
     constructor(props) {
       super(props);
-      this.proileImage = 'https://aboutreact.com/wp-content/uploads/2018/07/sample_img.png';
+      this.proileImage = 'http://hinhnendepnhat.net/wp-content/uploads/2016/11/nhung-buc-tranh-ve-thien-nhien.jpg';
       this.items = [
         {
           navOptionThumb: 'md-stats',
@@ -19,8 +19,8 @@ class CustomSideBarMenu extends Component {
           screenToNavigate: 'Captcha',
         },
         {
-          navOptionThumb: 'md-videocam',
-          navOptionName: 'Movie Screen',
+          navOptionThumb: 'md-airplane',
+          navOptionName: 'Book Movie Screen',
           screenToNavigate: 'Movie',
         },
         {
@@ -42,6 +42,16 @@ class CustomSideBarMenu extends Component {
           navOptionThumb: 'md-key',
           navOptionName: 'Permission Screen',
           screenToNavigate: 'Permission',
+        },
+        {
+          navOptionThumb: 'md-videocam',
+          navOptionName: 'Video And Sound',
+          screenToNavigate: 'VideoAndSound',
+        },
+        {
+          navOptionThumb: 'md-notifications',
+          navOptionName: 'Notification Screen',
+          screenToNavigate: 'Notifications',
         },
         {
           navOptionThumb: 'md-analytics',
@@ -97,21 +107,17 @@ class CustomSideBarMenu extends Component {
       width: '100%',
       height: '100%',
       backgroundColor: '#fff',
-      alignItems: 'center',
-      paddingTop: 20,
+      alignItems: 'center'
     },
     sideMenuProfileIcon: {
-      resizeMode: 'center',
-      width: 150,
+      width: Dimensions.get('window').width - 130,
       height: 150,
-      marginTop: 20,
-      borderRadius: 150 / 2,
+      resizeMode: 'cover'
     },
     sideMenuDivider: {
       width: '100%',
       height: 1,
-      backgroundColor: '#e2e2e2',
-      marginTop: 15,
+      backgroundColor: '#e2e2e2'
     },
     sideMenuOptionContainer: { 
       width: '100%' 

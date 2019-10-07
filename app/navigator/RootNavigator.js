@@ -10,6 +10,8 @@ import {
   StackAuth, 
   StackGoogleMap,
   StackPermission, 
+  StackNotifications,
+  StackVideoAndSound,
   StackGoogleAnalytics,
   StackTestDeepLinking 
 } from './StackNavigator';
@@ -24,6 +26,8 @@ const DrawerRoute = createDrawerNavigator({
     Calendar: StackCalendar,
     GoogleMap: StackGoogleMap,
     Permission: StackPermission,
+    Notifications: StackNotifications,
+    VideoAndSound: StackVideoAndSound,
     GoogleAnalytics: StackGoogleAnalytics,
     DeepLinking: StackTestDeepLinking
   }, {

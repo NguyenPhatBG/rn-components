@@ -33,8 +33,10 @@
     "react-native-image-picker": "^1.1.0",
     "react-native-maps": "0.26.0",
     "react-native-modalize": "^1.2.1",
+    "react-native-push-notification": "git+https://git@github.com/zo0r/react-native-push-notification.git",
     "react-native-qrcode-svg": "^5.2.0",
     "react-native-reanimated": "^1.2.0",
+    "react-native-sound": "^0.11.0",
     "react-native-svg": "^9.11.1",
     "react-native-swift": "^1.2.2",
     "react-native-track-player": "^1.1.8",
@@ -50,8 +52,7 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "rn-fetch-blob": "^0.11.2",
-    "styled-components": "^4.4.0",
-    "react-native-push-notification": "git+https://git@github.com/zo0r/react-native-push-notification.git"
+    "styled-components": "^4.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

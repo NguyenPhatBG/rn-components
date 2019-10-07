@@ -16,6 +16,7 @@ import { TopTab, TopTabGoogleMap, TopTabCalendar, TopTabPermission, TopTabNoti, 
 // Details
 import SpoilerDetail from './../screens/details/spoilerDetail';
 import MovieComfirm from './../components/movieTickets/Confirmation';
+import PlayerScreen from '../screens/tabsMusicAndVideo/sound/PlayerScreen';
 
 global.currentScreenIndex = 0;
 
@@ -140,7 +141,8 @@ const StackVideoAndSound = createStackNavigator({
       },
       headerTintColor: '#fff',
     })
-  }
+  },
+  PlayerScreen
 }, { headerLayoutPreset: 'center' });
 
 const StackGoogleMap = createStackNavigator({

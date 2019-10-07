@@ -20,7 +20,8 @@ import VisibleGoogleMap from '../screens/tabsGoogleMap/visibleGoogleMap';
 // Notifications
 import TopTabNoti01 from '../screens/PushNotification/Tab1';
 // Video And Sound
-import PlayerScreen from '../screens/tabsMusicAndVideo/sound/index';
+import SoundControl from '../screens/tabsMusicAndVideo/sound/index';
+import PlayerScreen from '../screens/tabsMusicAndVideo/sound/PlayerScreen';
 
 const topTabStyle = {
     lazy: true,
@@ -51,7 +52,7 @@ const TopTabGoogleMap = createMaterialTopTabNavigator({ GetCurrentPosition, Visi
 const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
 const TopTabPermission = createMaterialTopTabNavigator({ UploadImageToServer, DownloadImage, CameraKitScreen, PhoneCallAndEmailAndSMS, QRCodeScreen, VoiceRecognition, TextToSpeechConversationWithNaturalVoices }, topTabStyle);
 const TopTabNoti = createMaterialTopTabNavigator({ TopTabNoti01 } , topTabStyle);
-const TopTabSoundVideo = createMaterialTopTabNavigator({ PlayerScreen } , topTabStyle);
+const TopTabSoundVideo = createMaterialTopTabNavigator({ SoundControl, PlayerScreen } , topTabStyle);
 
 export {
     TopTab,

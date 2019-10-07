@@ -50,7 +50,8 @@
     "redux": "^4.0.4",
     "redux-thunk": "^2.3.0",
     "rn-fetch-blob": "^0.11.2",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "react-native-push-notification": "git+https://git@github.com/zo0r/react-native-push-notification.git"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",

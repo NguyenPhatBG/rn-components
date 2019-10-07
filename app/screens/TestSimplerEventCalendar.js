@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View , Dimensions } from 'react-native';
+import { View , Dimensions, Text } from 'react-native';
 import EventCalendar from 'react-native-events-calendar';
 
 let { width } = Dimensions.get('window');
@@ -58,6 +58,11 @@ export default class TestSimplerEventCalendar extends Component {
                   eventTapped={this.eventClicked.bind(this)}
                   //Function on event press
                   events={this.state.events}
+                  renderEvent={(event) => (
+                    <View style={{ flex: 1, backgroundColor: 'tomato', padding: 0, margin: 0 }}>
+                      <Text style={{ fontStyle: 'italic', fontSize: 15, fontWeight: 'bold' }}>{event.title}</Text>
+                    </View>
+                  )}
                   //passing the Array of event
                   width={width}
                   //Container width

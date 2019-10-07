@@ -23,6 +23,7 @@ import TopTabNoti01 from '../screens/PushNotification/Tab1';
 import SoundControl from '../screens/tabsMusicAndVideo/sound/index';
 import PlayerScreen from '../screens/tabsMusicAndVideo/sound/PlayerScreen';
 import PlayOnlyScreen from '../screens/tabsMusicAndVideo/sound/PlayOnlyScreen';
+import VideoDisplay from '../screens/tabsMusicAndVideo/video/index';
 
 const topTabStyle = {
     lazy: true,
@@ -53,7 +54,7 @@ const TopTabGoogleMap = createMaterialTopTabNavigator({ GetCurrentPosition, Visi
 const TopTabCalendar = createMaterialTopTabNavigator({ TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
 const TopTabPermission = createMaterialTopTabNavigator({ UploadImageToServer, DownloadImage, CameraKitScreen, PhoneCallAndEmailAndSMS, QRCodeScreen, VoiceRecognition, TextToSpeechConversationWithNaturalVoices }, topTabStyle);
 const TopTabNoti = createMaterialTopTabNavigator({ TopTabNoti01 } , topTabStyle);
-const TopTabSoundVideo = createMaterialTopTabNavigator({ SoundControl, PlayerScreen, PlayOnlyScreen } , topTabStyle);
+const TopTabSoundVideo = createMaterialTopTabNavigator({ SoundControl, PlayerScreen, PlayOnlyScreen, VideoDisplay } , topTabStyle);
 
 export {
     TopTab,

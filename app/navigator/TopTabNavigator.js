@@ -3,6 +3,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation-tabs';
 // Tabs
 import TopTabFirst from '../screens/tabsComponents/TopTabFirst';
 import TopTabSecond from '../screens/tabsComponents/TopTabSecond';
+import TopTabThird from '../screens/tabsComponents/TopTabThird';
 // Tabs Calendar
 import TestHorizontalCalendar from '../screens/tabsCalendar/TestHorizontalCalendar';
 import TestCalendarSelectPicker from '../screens/tabsCalendar/TestCalendarSelectPicker';
@@ -51,7 +52,7 @@ const topTabStyle = {
 };
 
 /** Flow TOP TABs Stack */
-const TopTab = createMaterialTopTabNavigator({ TopTabFirst, TopTabSecond } , topTabStyle);
+const TopTab = createMaterialTopTabNavigator({ TopTabFirst, TopTabSecond, TopTabThird } , topTabStyle);
 const TopTabGoogleMap = createMaterialTopTabNavigator({ GetCurrentPosition, VisibleGoogleMap } , topTabStyle);
 const TopTabCalendar = createMaterialTopTabNavigator({ TestWoodpicker, TestHorizontalCalendar, TestCalendarSelectPicker, TestSimplerEventCalendar } , topTabStyle);
 const TopTabPermission = createMaterialTopTabNavigator({ UploadImageToServer, DownloadImage, CameraKitScreen, PhoneCallAndEmailAndSMS, QRCodeScreen, VoiceRecognition, TextToSpeechConversationWithNaturalVoices }, topTabStyle);

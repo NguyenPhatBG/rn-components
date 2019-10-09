@@ -80,6 +80,12 @@ export default App;
   */
 
   /**
+   * QRCode
+   * 1. QRCode Render
+   * 2. Read QRCode
+   */
+
+  /**
    * Voice
    * 1. Text to Speech Conversation
    * 2. Voice Recognition

@@ -12,6 +12,7 @@ import {
   StackPermission, 
   StackNotifications,
   StackVideoAndSound,
+  StackGoogleAdmod,
   StackGoogleAnalytics,
   StackTestDeepLinking 
 } from './StackNavigator';
@@ -28,6 +29,7 @@ const DrawerRoute = createDrawerNavigator({
     Permission: StackPermission,
     Notifications: StackNotifications,
     VideoAndSound: StackVideoAndSound,
+    GoogleAdmod: StackGoogleAdmod,
     GoogleAnalytics: StackGoogleAnalytics,
     DeepLinking: StackTestDeepLinking
   }, {

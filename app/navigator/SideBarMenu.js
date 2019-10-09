@@ -54,6 +54,11 @@ class CustomSideBarMenu extends Component {
           screenToNavigate: 'Notifications',
         },
         {
+          navOptionThumb: 'md-card',
+          navOptionName: 'Google AD Screen',
+          screenToNavigate: 'GoogleAdmod',
+        },
+        {
           navOptionThumb: 'md-analytics',
           navOptionName: 'Google Analytics Screen',
           screenToNavigate: 'GoogleAnalytics',

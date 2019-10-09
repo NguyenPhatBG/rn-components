@@ -6,6 +6,7 @@ import TestAppIntro from '../screens/TestAppIntro';
 import TestReCaptcha from '../screens/TestReCaptcha';
 import TestMovieBooking from '../screens/TestMovieBooking';
 import TestWebView from '../screens/TestWebView';
+import GoogleAdmod from '../screens/GoogleAdmod';
 import TestGoogleAnalytics from '../screens/TestGoogleAnalytics';
 import TestDeepLinking from '../screens/TestDeepLinking';
 
@@ -159,6 +160,20 @@ const StackGoogleMap = createStackNavigator({
   }
 }, { headerLayoutPreset: 'center' });
 
+const StackGoogleAdmod = createStackNavigator({
+  GoogleAdmod: {
+    screen: GoogleAdmod,
+    navigationOptions: ({ navigation }) => ({
+      headerTitle: "Google Admod Screen",
+      headerLeft: <NavigationDrawerStructure navigationProps={navigation} />,
+      headerStyle: {
+        backgroundColor: '#30336b',
+      },
+      headerTintColor: '#fff',
+    })
+  }
+}, { headerLayoutPreset: 'center' });
+
 const StackGoogleAnalytics = createStackNavigator({
   TestGoogleAnalytics: {
     screen: TestGoogleAnalytics,
@@ -199,6 +214,7 @@ export {
   StackPermission,
   StackNotifications,
   StackVideoAndSound,
+  StackGoogleAdmod,
   StackGoogleAnalytics,
   StackTestDeepLinking
 };

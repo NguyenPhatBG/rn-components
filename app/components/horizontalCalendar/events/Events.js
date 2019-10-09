@@ -5,7 +5,7 @@ import {
   View,
 } from 'react-native';
 import Event from './Event';
-import { EventType } from '../../../screens/TestHorizontalCalendar';
+import { EventType } from '../../../screens/tabsCalendar/TestHorizontalCalendar';
 
 export default class Events extends Component {
 

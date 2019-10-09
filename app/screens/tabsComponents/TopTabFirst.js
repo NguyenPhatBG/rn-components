@@ -3,7 +3,7 @@ import TestSpoiler from '../TestSpoiler';
 
 export default class TopTabFirst extends Component {
     static navigationOptions = {
-        tabBarLabel: 'Tab 01',
+        tabBarLabel: 'RN Spoiler',
     };
 
     render() {

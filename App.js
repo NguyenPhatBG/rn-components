@@ -19,7 +19,8 @@ class App extends PureComponent {
     YellowBox.ignoreWarnings([
       'Warning: componentWillMount is deprecated',
       'Warning: componentWillReceiveProps is deprecated',
-      'Module RCTImageLoader requires'
+      'Module RCTImageLoader requires',
+      'Require cycle'
     ]);
   }
 
@@ -58,6 +59,7 @@ export default App;
  * 2. Captcha
  * 3. TextInput
  * 4. Card
+ * 5. Modal<Modal, Modal Picker>
  */
 
  /**
@@ -74,6 +76,7 @@ export default App;
   * 2. Websocket (done)
   * 3. WebRTC
   * 4. SIP.js
+  * 5. AR and VR 
   */
 
   /**

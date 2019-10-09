@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import faker from 'faker';
 import moment from 'moment';
-import Calendar from '../components/horizontalCalendar/calendar/Calendar';
-import Events from '../components/horizontalCalendar/events/Events';
+import Calendar from '../../components/horizontalCalendar/calendar/Calendar';
+import Events from '../../components/horizontalCalendar/events/Events';
 import type Moment from 'moment';
 
 export type EventType = {
